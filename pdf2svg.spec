@@ -1,29 +1,27 @@
 Name:		pdf2svg
-Version:	0.2.1
-Release:	4
+Version:	0.2.3
+Release:	1
 Summary:	Small tool to convert PDF files into SVG
 Group:		Office
 License:	GPLv2+
-URL:		http://www.cityinthesky.co.uk/pdf2svg.html
-Source0:	http://www.cityinthesky.co.uk/files/pdf2svg-%{version}.tar.gz
+URL:		https://cityinthesky.co.uk/opensource/pdf2svg/
+Source0:	https://github.com/dawbarton/pdf2svg/archive/refs/tags/v%{version}.tar.gz
 BuildRequires:	pkgconfig(cairo)
-BuildRequires:	pkgconfig(gtk+-2.0)
 BuildRequires:	pkgconfig(poppler-glib)
 
 %description
 A small tool to convert PDF files into SVG using poppler and cairo.
 
 %prep
-%setup -q
+%autosetup -p1
+%configure
 
 %build
-%configure2_5x
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %files
 %doc COPYING AUTHORS ChangeLog
 %{_bindir}/pdf2svg
-
