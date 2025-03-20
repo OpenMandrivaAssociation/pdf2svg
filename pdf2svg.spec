@@ -1,5 +1,5 @@
 Name:		pdf2svg
-Version:	0.2.3
+Version:	0.2.4
 Release:	1
 Summary:	Small tool to convert PDF files into SVG
 Group:		Office
