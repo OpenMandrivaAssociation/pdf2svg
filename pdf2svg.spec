@@ -6,6 +6,11 @@ Group:		Office
 License:	GPLv2+
 URL:		https://cityinthesky.co.uk/opensource/pdf2svg/
 Source0:	https://github.com/dawbarton/pdf2svg/archive/refs/tags/v%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	pkgconfig(cairo)
 BuildRequires:	pkgconfig(poppler-glib)
 
